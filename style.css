@@ -31,10 +31,34 @@ a:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
+.togglenav {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 50px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 10px;
+    border: 4px solid rgb(0, 0, 0);
+
+    font-size: 15px;
+}
+
+section, footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
 }
 
 .flex-nav ul {
@@ -90,6 +114,42 @@ a:hover i {
 
     .flex-nav li {
         flex-basis: 100%;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper > * {
+        order: 99;
+    }
+
+    .flex-nav {
+        order: 1;
+    }
+
+    .togglenav {
+        display: block;
+    }
+
+    .flex-nav ul {
+        display: none;
+    }
+
+    .flex-nav ul.open {
+        display: flex;
+    }
+
+    .top {
+        order: 2;
+    }
+
+    .details {
+        order: 3;
+    }
+
+    .signup {
+        order: 4;
     }
 }
 
